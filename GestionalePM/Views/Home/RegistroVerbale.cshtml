@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "RegistroVerbale";
+}
+
+<h2 class="text-center">RegistroVerbale</h2>
+
+<div class="d-flex justify-content-center my-lg-5 ">
+
+    <div class="container-fluid">
+
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Verbali trascritti per Trasgressori
+        </button>
+
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+               @{ 
+                   Html.RenderAction("PartialViewNumVerbali");
+               }
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExamples" aria-expanded="false" aria-controls="collapseExample">
+           Totale Punti decurtati per Trasgressore
+        </button>
+
+        <div class="collapse" id="collapseExamples">
+            <div class="card card-body">
+                @{ 
+                    Html.RenderAction("PartialViewPunti");
+                }
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="d-flex justify-content-center my-4">
+    <div class="container-fluid">
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampl" aria-expanded="false" aria-controls="collapseExample">
+            Violazioni sopra i 10 punti
+        </button>
+
+        <div class="collapse" id="collapseExampl">
+            <div class="card card-body">
+              @{ 
+                  Html.RenderAction("PartialViewOver10Punti");
+              }
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExamp" aria-expanded="false" aria-controls="collapseExample">
+            Violazione sopra i 400€
+        </button>
+
+        <div class="collapse" id="collapseExamp">
+            <div class="card card-body">
+              @{
+                  Html.RenderAction("PartialViewImporto");
+              }
+            </div>
+        </div>
+    </div>
+</div>

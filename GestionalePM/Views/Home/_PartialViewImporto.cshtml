@@ -1,0 +1,52 @@
+﻿@model IEnumerable<GestionalePM.Models.Verbale>
+
+
+<table class="table w-25">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Trasgressore.Nome)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Trasgressore.Cognome)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.DataViolazione)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Importo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Punti)
+        </th>
+
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Trasgressore.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Trasgressore.Cognome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataViolazione)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Importo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Punti)
+        </td>
+
+
+    </tr>
+}
+
+</table>
